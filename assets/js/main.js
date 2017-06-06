@@ -25,6 +25,34 @@ $(document).ready(function(){
 		$(this).addClass("special");
 		$("#btn2,#btn1").removeClass("special");
 	});
+
+	$("#teach2").hide();
+	$("#teach3").hide();
+	$("#teach4").hide();
+	$("#class01").click(function(){
+		$("#teach1").show();
+		$("#teach2,#teach3,#teach4").hide();
+		$(this).addClass("special");
+		$("#class02,#class03,#class04").removeClass("special");
+	});
+	$("#class02").click(function(){
+		$("#teach2").show();
+		$("#teach1,#teach3,#teach4").hide();
+		$(this).addClass("special");
+		$("#class01,#class03,#class04").removeClass("special");
+	});
+	$("#class03").click(function(){
+		$("#teach3").show();
+		$("#teach1,#teach2,#teach4").hide();
+		$(this).addClass("special");
+		$("#class01,#class02,#class04").removeClass("special");
+	});
+	$("#class04").click(function(){
+		$("#teach4").show();
+		$("#teach1,#teach2,#teach3").hide();
+		$(this).addClass("special");
+		$("#class01,#class02,#class03").removeClass("special");
+	});
 });
 
 (function($) {
